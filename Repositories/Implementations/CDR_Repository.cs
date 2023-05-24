@@ -1,4 +1,5 @@
 ﻿using CDR_API.Contexts;
+using CDR_API.Entities;
 using CDR_API.Models;
 using CDR_API.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,13 @@ namespace CDR_API.Repositories.Implementations
                            }).ToList();
 
             return cdrList;
+        }
+
+        public void AddRecord(CDR_Table record) 
+        { 
+            _context.CDR_Table.Add(record);
+
+            _context.SaveChanges();
         }
     }
 }

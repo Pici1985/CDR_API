@@ -10,7 +10,6 @@ namespace CDR_API.Contexts
         {
         }
 
-        public DbSet<TestTable> TestTable { get; set; }
         public DbSet<CDR_Table> CDR_Table { get; set; }
     }
 }
